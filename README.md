@@ -111,7 +111,6 @@ X_new = SelectPercentile(chi2, percentile=10).fit_transform(X, y_transformed)
 X_new.shape
 
 #WRAPPER METHOD
-
 #1.FORWARD FEATURE SELECTION
 
 from mlxtend.feature_selection import SequentialFeatureSelector as SFS
@@ -146,7 +145,6 @@ sffs.fit(X, y)
 sffs.k_feature_names_
 
 #4.RECURSIVE FEATURE SELECTION
-
 from sklearn.feature_selection import RFE
 lr=LinearRegression()
 rfe=RFE(lr,n_features_to_select=7)
@@ -160,7 +158,6 @@ rfe.ranking_
 #EMBEDDED METHOD
 
 #1.RANDOM FOREST IMPORTANCE
-
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier().fit(X,y_transformed)
 importances=model.feature_importances_
@@ -195,26 +192,20 @@ Variance Threshold:
 ## Chi Square Test:
 ![image](https://user-images.githubusercontent.com/120380280/234183965-71ba514e-8393-4caf-ab19-6b0c02ffcaed.png)
 ![image](https://user-images.githubusercontent.com/120380280/234183992-d054afd6-9a26-4bef-83ad-efc3ab4fa573.png)
-## 12
-SelectPercentile Method:
+## SelectPercentile Method:
+![image](https://user-images.githubusercontent.com/120380280/234184293-f52e777e-624f-462f-b79d-4564d97edd08.png)
+## Wrapper Methods:
+Forward Feature Selection:
+![image](https://user-images.githubusercontent.com/120380280/234184356-e2619666-e1b8-4d53-b6c2-7cdf38db0d6d.png)
+## Backward Feature Selection:
+![image](https://user-images.githubusercontent.com/120380280/234184391-a604e629-b1a0-4bc9-8e2b-d3a23602f160.png)
+## Bi-Directional Elimination:
+![image](https://user-images.githubusercontent.com/120380280/234184438-63497e7f-51ad-4ca7-b34b-a51467c5cced.png)
+## Recursive Feature Selection:
+![image](https://user-images.githubusercontent.com/120380280/234184482-0b042b15-cef3-47d9-93c4-8257a8a93ba9.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Embedded Methods:
+Random Forest Importance:
+![image](https://user-images.githubusercontent.com/120380280/234184580-65769b0e-74bd-4c70-a50f-010b090cb40c.png)
+## RESULT:
+Hence various feature selection techniques are applied to the given data set successfully and saved the data into a file.
